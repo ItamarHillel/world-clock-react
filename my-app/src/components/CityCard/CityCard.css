@@ -1,0 +1,79 @@
+.city-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.city-card:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.city-card.daytime {
+  background: linear-gradient(135deg, var(--card-bg) 0%, var(--daytime-bg) 100%);
+}
+
+.city-card.nighttime {
+  background: linear-gradient(135deg, var(--card-bg) 0%, var(--nighttime-bg) 100%);
+}
+
+.city-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.day-night-indicator {
+  font-size: 1.5rem;
+}
+
+.city-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.city-time {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.city-info {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.timezone-abbr {
+  background: var(--badge-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.utc-offset {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.city-card-error {
+  color: var(--error-text);
+  font-size: 0.9rem;
+  margin: 0;
+}
